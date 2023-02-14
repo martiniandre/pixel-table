@@ -12,8 +12,6 @@ export function CollorButton({ color, selectedColor, handleSelectedColor, userAc
   const activeClass = selectedColor === color ? "active" : ""
   const disabled = userAction === "erase"
 
-  console.log(disabled)
-
   return (
     <button type="button" className={`choose-button ${color} ${activeClass}`} disabled={disabled} key={color} onClick={() => handleSelectedColor(color)} />
   )

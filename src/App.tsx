@@ -1,4 +1,3 @@
-import * as React from 'react'
 import './App.css'
 import { ActionButton } from './components/ActionButton'
 import { Cell } from './components/Cell'
@@ -49,10 +48,10 @@ function App() {
       <button type="button" onClick={clearTable}>Limpar</button>
       <section className="table">
         {table.map((row, index) => (
-          <div key={row.at(index)} className="row">
+          <div key={index} className="row">
             {row.map((cell, idx) => (
               <Cell
-                key={cell.at(idx)}
+                key={idx}
                 color={cell}
                 table={{
                   row: index,
