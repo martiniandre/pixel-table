@@ -20,9 +20,11 @@ export function useTable() {
   const [table, setTable] = React.useState<Color[][]>(matriz)
 
   const onCellClick = (row: number, cell: number, color: Color) => {
-    let newTable = [...table]
-    newTable[row][cell] = color
-    setTable(newTable)
+    setTable(table => {
+      let newTable = [...table]
+      newTable[row][cell] = color
+      return newTable
+    })
   }
 
   const clearTable = () => {
